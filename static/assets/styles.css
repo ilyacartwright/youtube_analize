@@ -1,10 +1,21 @@
 /*!******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./static/scss/styles.scss ***!
   \******************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap);
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./static/scss/styles.scss (1) ***!
+  \**********************************************************************************************************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "LXGW WenKai TC", cursive;
+}
+
+body {
+  background: url(/static/assets/2d315d6c1f98e03f0bb3.webp) center/cover no-repeat;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .menu {
@@ -34,4 +45,58 @@
   text-decoration: none;
   color: whitesmoke;
   font-size: 24px;
+}
+
+.log-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: grey;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.log-form h1 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.log-form input {
+  display: block;
+  width: 90%;
+  padding: 15px 5px;
+  border: none;
+  outline: none;
+  margin: 10px auto;
+  border-radius: 10px;
+  font-size: 20px;
+  opacity: 0.2;
+  transition: 0.5s;
+}
+.log-form input:hover, .log-form input:focus {
+  opacity: 0.8;
+}
+.log-form label {
+  padding-left: 5%;
+  font-size: 25px;
+}
+.log-form button {
+  width: 90%;
+  display: block;
+  margin: 30px auto;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: #222;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.5s;
+  color: white;
+}
+.log-form button:hover {
+  background: whitesmoke;
+  color: #222;
 }
