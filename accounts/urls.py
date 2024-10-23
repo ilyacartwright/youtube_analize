@@ -2,6 +2,9 @@ from django.urls import path, include
 from django.contrib.auth import views
 from .views import CustomUserCreateView
 
+app_name = 'accounts'
+
+
 urlpatterns = [
     path('register/', CustomUserCreateView.as_view(), name='reg'),
     path('login/', views.LoginView.as_view(), name='login'),

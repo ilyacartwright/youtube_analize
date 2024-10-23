@@ -8,4 +8,4 @@ class CustomUserCreateView(CreateView):
     model = CustomUser
     form_class = CustomUserCreationForm
     template_name = 'registration/register.html'
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('accounts:login')
