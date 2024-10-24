@@ -6,7 +6,14 @@
 {% block content %}
 <br><br><br><br><br>
 
-Главная страница
+<div class="log-form">
+    <h1>Проанализировать видео</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Анализировать</button>
+    </form>
+</div>
 <br>
 {{ user }}
 {% endblock content %}

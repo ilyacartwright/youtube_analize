@@ -21,5 +21,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
     "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }

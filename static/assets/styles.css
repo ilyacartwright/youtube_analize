@@ -34,17 +34,77 @@ body {
   list-style: none;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .menu-list {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: #222;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+}
 .menu-link {
   color: white;
   font-size: 24px;
   margin-right: 20px;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .menu-link {
+    margin: 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .menu-item {
+    margin: 20px 0;
+  }
+}
 
 .logo a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 24px;
+}
+
+.burger_menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+.burger_menu span {
+  display: block;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.burger_menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger_menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger_menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+@media (max-width: 768px) {
+  .burger_menu {
+    display: flex;
+  }
+}
+
+.active {
+  display: flex;
 }
 
 .log-form {
@@ -99,4 +159,12 @@ body {
 .log-form button:hover {
   background: whitesmoke;
   color: #222;
+}
+
+.errorlist {
+  padding-left: 5%;
+  font-size: 25px;
+  color: #5f2e2e;
+  list-style: none;
+  padding-bottom: 10px;
 }

@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from youtube.forms import VideoAnalysisForm
 
 def main(request):
-    return render(request, 'index.html')
+    form = VideoAnalysisForm()
+    return render(request, 'index.html', {'form': form})

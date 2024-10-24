@@ -2,31 +2,41 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'assets/styles.css' %}">
 </head>
+
 <body>
     <header class="header">
         <nav class="menu">
             <div class="logo">
-                <a href="{% url 'main:main' %}"> <p class="logo-text">КонтентИнсайт AI</p></a>
-               
+                <a href="{% url 'main:main' %}">
+                    <p class="logo-text">КонтентИнсайт AI</p>
+                </a>
             </div>
+
+            <div class="burger_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="menu-list">
                 <li class="menu-item"><a href="{% url 'main:main' %}" class="menu-link">Главная</a></li>
                 {% if user.is_authenticated %}
-                    <li class="menu-item"><a href="#" class="menu-link">Профиль</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Отчеты</a></li>
-                    <li class="menu-item"><a href="{% url 'accounts:logout'  %}" class="menu-link">Выйти</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Профиль</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Отчеты</a></li>
+                <li class="menu-item"><a href="{% url 'accounts:logout'  %}" class="menu-link">Выйти</a></li>
 
 
-                    
+
                 {% else %}
-                    <li class="menu-item"><a href="{% url 'accounts:reg'  %}" class="menu-link">Регистрация</a></li>
-                    <li class="menu-item"><a href="{% url 'accounts:login'  %}" class="menu-link">Войти</a></li>
+                <li class="menu-item"><a href="{% url 'accounts:reg'  %}" class="menu-link">Регистрация</a></li>
+                <li class="menu-item"><a href="{% url 'accounts:login'  %}" class="menu-link">Войти</a></li>
                 {% endif %}
             </ul>
         </nav>
@@ -37,4 +47,5 @@
 
     <script src="{% static 'assets/bundle.js' %}"></script>
 </body>
+
 </html>
